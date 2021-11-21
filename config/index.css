@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+body {
+  font-family: 'Allerta Stencil', sans-serif;
+  margin: 0;
+  height: 200vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 180% 10%;
+  grid-template-areas: "header header" "main     main" "footer footer"; }
+  body a {
+    text-decoration: none; }
+  body header {
+    background-color: #034C8C;
+    color: #FFFFFF;
+    grid-area: header; }
+    @media screen and (max-device-width: 1023px) {
+      body header {
+        display: none; } }
+  body main {
+    background-color: #FFFFFF;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: "prod" "form"; }
+    body main #absoluto {
+      position: fixed;
+      margin-left: 25vw; }
+    body main #zap {
+      height: 17vh;
+      width: 12vw;
+      cursor: pointer; }
+    body main #prod {
+      grid-area: prod;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 20% 30% 50%;
+      grid-template-areas: "promo      promo" "promoprod promoprod" "mivival mivival"; }
+      body main #prod #promo {
+        grid-area: promo; }
+        body main #prod #promo #video {
+          height: 100%;
+          width: 100%; }
+      body main #prod #promoprod {
+        grid-area: promoprod;
+        background: whitesmoke;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "prod1 prod2" "prod3 prod4"; }
+        body main #prod #promoprod #prod1 {
+          grid-area: prod1; }
+          body main #prod #promoprod #prod1 #top {
+            border: solid 1px rgba(0, 0, 0, 0.09);
+            height: 100%;
+            width: 100%; }
+        body main #prod #promoprod #prod2 {
+          grid-area: prod2; }
+          body main #prod #promoprod #prod2 #mini {
+            border: solid 1px rgba(0, 0, 0, 0.09);
+            height: 100%;
+            width: 100%; }
+        body main #prod #promoprod #prod3 {
+          grid-area: prod3; }
+          body main #prod #promoprod #prod3 #residence {
+            border: solid 1px rgba(0, 0, 0, 0.09);
+            height: 100%;
+            width: 100%; }
+        body main #prod #promoprod #prod4 {
+          grid-area: prod4; }
+          body main #prod #promoprod #prod4 #top5 {
+            border: solid 1px rgba(0, 0, 0, 0.09);
+            height: 100%;
+            width: 100%; }
+        body main #prod #promoprod #prod1, body main #prod #promoprod #prod2, body main #prod #promoprod #prod3, body main #prod #promoprod #prod4 {
+          border: solid 1px #FFFFFF; }
+      body main #prod #mivival {
+        background-color: #03658C;
+        color: whitesmoke;
+        grid-area: mivival;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "nos  nos" "val  val"; }
+        body main #prod #mivival a {
+          color: #FFFFFF; }
+        body main #prod #mivival #nos {
+          grid-area: nos; }
+          body main #prod #mivival #nos h2 {
+            margin-bottom: 5vh; }
+          body main #prod #mivival #nos #logo-timol {
+            margin-top: 7vh;
+            height: 200px;
+            width: 400px; }
+        body main #prod #mivival #val {
+          grid-area: val; }
+        body main #prod #mivival #nos, body main #prod #mivival #val {
+          text-align: center;
+          padding: 5em; }
+    body main #form {
+      grid-area: form;
+      padding: 0.5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      body main #form #msg {
+        margin-bottom: 2vh; }
+      body main #form #nome, body main #form #email {
+        max-width: 90%;
+        margin-bottom: 2.5vh; }
+      body main #form #exampleFormControlTextarea1 {
+        width: 1010px;
+        margin-bottom: 0.5vh; }
+      body main #form #sucesso, body main #form #vazio, body main #form #servidor {
+        margin-top: 2vh;
+        cursor: pointer; }
+  body footer {
+    background-color: black;
+    color: #FFFFFF;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: "redes             redes" "copyright desenvolvedor"; }
+    @media screen and (max-device-width: 1023px) {
+      body footer {
+        display: none; } }
+    body footer #redes {
+      grid-area: redes;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      body footer #redes #redes-icone {
+        width: 30%;
+        height: 14vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+        body footer #redes #redes-icone #icone {
+          color: #FFFFFF; }
+    body footer #criador {
+      text-shadow: 1px 1px 1px #FFFFFF;
+      font-size: small;
+      margin-left: 0.5vw; }
+    body footer #copy {
+      grid-area: copyright;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: end; }
+    body footer #desenvolvedor {
+      grid-area: desenvolvedor;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: end;
+      margin-right: 3vw; }
+    body footer #copy, body footer #desenvolvedor {
+      font-size: x-small; }

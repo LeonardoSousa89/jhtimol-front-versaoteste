@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+    $alpha:#FFFFFF;
+    $primary:#034C8C;
+    $secondary:#03658C;
+    $thirdy:#04BEC4;
+    $aqua:#CCFFEB;
+    $dark:black;
+    $smoke:whitesmoke;
+    $val:0.5em;
+    $empty-val:none;
+    $hidden:hidden;
+    $point:pointer;
+    $center:center;
+    $null:0;
+    $half-rem:0.5rem;
+    $half-twelve:6px;
+
+@mixin area($areas){
+     grid-area:$areas;
+}
+@mixin d_grid($g_display,$columns,$rows,$g_areas){
+    display:$g_display;
+    grid-template-columns:$columns;
+    grid-template-rows:$rows;
+    grid-template-areas:$g_areas;
+  }
+@mixin d_flex($f_display,$direction,$justify,$align){
+    display:$f_display;
+    flex-direction:$direction;
+    justify-content:$justify;
+    align-items:$align;
+}
+@mixin size($hgt,$wdt){
+    height:$hgt;
+    width:$wdt;
+}
+@mixin f_size($font){
+    font-size:$font;
+}
+@mixin radius($bdr){
+     border-radius:$bdr; 
+}
+@mixin percent($p_vh){
+     margin:$p_vh;
+} 
+
+body{
+    font-family: 'Allerta Stencil', sans-serif;
+    @include percent(0);
+    @include size(200vh,100vw);
+    // overflow-x:$hidden;
+
+    a{
+        text-decoration:$empty-val;
+    }
+
+    @include d_grid(grid,1fr,10% 180% 10%,
+                    'header header'
+                    'main     main'
+                    'footer footer'
+                    );
+
+        header{
+            background-color:$primary;
+            color:$alpha;
+            @include area(header);
+
+            @media screen and(max-device-width:1023px) {
+                display: $empty-val;
+            }
+
+        }
+        main{
+            background-color:$alpha;
+            @include area(main);
+            @include d_grid(grid,1fr,80% 20%,
+                        'prod'
+                        'form'
+                        );
+            #absoluto{
+                position:fixed;
+                margin-left:25vw;
+            }
+            #zap{
+                @include size(17vh,12vw);
+                cursor:$point;
+            }   
+            #prod{
+                @include area(prod);
+                @include d_grid(grid,1fr,20% 30% 50%,
+                                'promo      promo'
+                                'promoprod promoprod'
+                                'mivival mivival'
+                                );
+                #promo{
+                    @include area(promo);
+                    #video{
+                        @include size(100%, 100%);
+                    }
+                }
+                #promoprod{
+                    @include area(promoprod);
+                         // temporario
+                     background: $smoke;
+                     @include d_grid(grid,1fr 1fr,50% 50%,
+                                    'prod1 prod2'
+                                    'prod3 prod4'
+                                    );
+                     #prod1{
+                        @include area(prod1);
+                        #top{
+                            border:solid 1px rgba($color: #000000, $alpha: 0.09);
+                            @include size(100%,100%);
+                        }
+                     }
+                     #prod2{
+                        @include area(prod2);
+                        #mini{
+                            border:solid 1px rgba($color: #000000, $alpha: 0.09);
+                            @include size(100%,100%);
+                        }
+                     }
+                     #prod3{
+                        @include area(prod3);
+                        #residence{
+                            border:solid 1px rgba($color: #000000, $alpha: 0.09);
+                            @include size(100%,100%);
+                        }
+                     }
+                     #prod4{
+                        @include area(prod4);
+                        #top5{
+                            border:solid 1px rgba($color: #000000, $alpha: 0.09);
+                            @include size(100%,100%);
+                        }
+                     }
+                     #prod1,#prod2,#prod3,#prod4{
+                        //  temporario
+                        border:solid 1px $alpha;
+                     }
+                }
+                #mivival{
+                    background-color:$secondary;
+                    color:whitesmoke;
+                    a{
+                        color:#FFFFFF;
+                    }
+                    @include area(mivival);
+                    @include d_grid(grid,1fr,50% 50%,
+                                    'nos  nos'
+                                    'val  val'
+                                    );
+                    #nos{
+                        @include area(nos);
+                        h2{
+                           margin-bottom:5vh;
+                        }
+                        // #somos{
+                        // }
+                        #logo-timol{
+                            margin-top:7vh;
+                            @include size(200px,400px);
+                        }
+                    }
+                    #val{
+                        @include area(val);
+                    }
+                    #nos,#val{
+                        text-align: center;
+                        padding:5em;
+                    }
+                }
+                #promo,#promoprod,#mivival{
+                }
+            }
+            #form{
+                @include area(form);
+                padding:0.5vw;
+                
+                @include d_flex(flex,column,center,center);
+                #msg{
+                    margin-bottom:2vh;
+                }
+                #nome,#email{
+                    max-width:90%;
+                    margin-bottom:2.5vh;
+                }
+                #exampleFormControlTextarea1{
+                    width:1010px;
+                    margin-bottom:0.5vh;
+                }
+                #sucesso,#vazio,#servidor{
+                    margin-top:2vh;
+                    cursor:$point;
+                }
+            }
+        }
+        footer{
+
+              @media screen and(max-device-width:1023px) {
+              display: $empty-val;
+                 }
+            
+            background-color:$dark;
+            color:$alpha;
+            @include area(footer);
+            @include d_grid(grid,1fr 1fr,80% 20%, 
+                            'redes             redes'
+                            'copyright desenvolvedor'
+                    );
+            #redes{
+                @include area(redes);
+                @include d_flex(flex,column,center,center);
+                #redes-icone{
+                    width:30%;
+                    height:14vh;
+                    @include d_flex(flex,row,space-between,center);
+                    #icone{
+                        color:$alpha;
+                    }
+                }
+            }
+            #criador{
+                text-shadow:1px 1px 1px $alpha;
+                @include f_size(small);
+                margin-left:0.5vw; 
+            }
+            #copy{
+                @include area(copyright);
+                @include d_flex(flex,row,flex-start,end);
+            }
+            #desenvolvedor{
+                @include area(desenvolvedor);
+                @include d_flex(flex,row,flex-end,end);
+                margin-right:3vw;
+            }
+            #copy,#desenvolvedor{
+                @include f_size(x-small);
+            }
+        }
+}
+
+
