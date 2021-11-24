@@ -153,19 +153,15 @@ body{
                                     );
                     #nos{
                         @include area(nos);
-                        border:solid red 1px;
                         h2{
                            @include area(titulosomos);
-                           border:solid red 1px;
                            margin-bottom:5vh;
                         }
                         #somos{
                             @include area(somos);
-                            border:solid red 1px;
                         }
                         #logotimol{
                             @include area(logotimol);
-                            border:solid red 1px;
                         }
                         #logo-timol{
                             @include area(logotimol);

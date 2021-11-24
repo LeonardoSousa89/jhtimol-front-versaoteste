@@ -87,21 +87,17 @@ body {
           color: #FFFFFF; }
         body main #prod #mivival #nos {
           grid-area: nos;
-          border: solid red 1px;
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr 1fr 1fr;
           grid-template-areas: "titulosomos titulosomos" "somos somos" "logotimol logotimol"; }
           body main #prod #mivival #nos h2 {
             grid-area: titulosomos;
-            border: solid red 1px;
             margin-bottom: 5vh; }
           body main #prod #mivival #nos #somos {
-            grid-area: somos;
-            border: solid red 1px; }
+            grid-area: somos; }
           body main #prod #mivival #nos #logotimol {
-            grid-area: logotimol;
-            border: solid red 1px; }
+            grid-area: logotimol; }
           body main #prod #mivival #nos #logo-timol {
             grid-area: logotimol;
             margin-top: 7vh;
