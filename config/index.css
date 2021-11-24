@@ -91,7 +91,7 @@ body {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-          grid-template-areas: "titulosomos titulosomos" "somos somos" "logo-timol logo-timol"; }
+          grid-template-areas: "titulosomos titulosomos" "somos somos" "logotimol logotimol"; }
           body main #prod #mivival #nos h2 {
             grid-area: titulosomos;
             border: solid red 1px;
@@ -99,9 +99,11 @@ body {
           body main #prod #mivival #nos #somos {
             grid-area: somos;
             border: solid red 1px; }
+          body main #prod #mivival #nos #logotimol {
+            grid-area: logotimol;
+            border: solid red 1px; }
           body main #prod #mivival #nos #logo-timol {
-            grid-area: logo-timol;
-            border: solid red 1px;
+            grid-area: logotimol;
             margin-top: 7vh;
             height: 200px;
             width: 400px; }

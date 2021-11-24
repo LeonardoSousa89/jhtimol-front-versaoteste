@@ -163,9 +163,12 @@ body{
                             @include area(somos);
                             border:solid red 1px;
                         }
-                        #logo-timol{
-                            @include area(logo-timol);
+                        #logotimol{
+                            @include area(logotimol);
                             border:solid red 1px;
+                        }
+                        #logo-timol{
+                            @include area(logotimol);
                             margin-top:7vh;
                             @include size(200px,400px);
                         }
@@ -173,7 +176,7 @@ body{
                         @include d_grid(grid,1fr,1fr 1fr 1fr,
                                         'titulosomos titulosomos'
                                         'somos somos'
-                                        'logo-timol logo-timol' )
+                                        'logotimol logotimol' )
                     }
                     #val{
                         @include area(val);
