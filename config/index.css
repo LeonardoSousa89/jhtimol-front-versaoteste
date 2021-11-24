@@ -86,10 +86,22 @@ body {
         body main #prod #mivival a {
           color: #FFFFFF; }
         body main #prod #mivival #nos {
-          grid-area: nos; }
+          grid-area: nos;
+          border: solid red 1px;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-areas: "titulosomos titulosomos" "somos somos" "logo-timol logo-timol"; }
           body main #prod #mivival #nos h2 {
+            grid-area: titulosomos;
+            border: solid red 1px;
             margin-bottom: 5vh; }
+          body main #prod #mivival #nos #somos {
+            grid-area: somos;
+            border: solid red 1px; }
           body main #prod #mivival #nos #logo-timol {
+            grid-area: logo-timol;
+            border: solid red 1px;
             margin-top: 7vh;
             height: 200px;
             width: 400px; }
