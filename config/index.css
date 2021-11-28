@@ -117,7 +117,28 @@ body {
             height: 200px;
             width: 400px; }
         body main #prod #mivival #val {
-          grid-area: val; }
+          grid-area: val;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 20% 80%;
+          grid-template-areas: "titulo-valores titulo-valores" "argumentos argumentos"; }
+          body main #prod #mivival #val #titulo-valores {
+            background-color: whitesmoke;
+            color: black;
+            grid-area: titulo-valores;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3px; }
+          body main #prod #mivival #val #argumentos {
+            background-color: whitesmoke;
+            color: black;
+            grid-area: argumentos;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
         body main #prod #mivival #nos, body main #prod #mivival #val {
           text-align: center;
           padding: 5em; }

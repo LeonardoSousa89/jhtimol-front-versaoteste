@@ -78,10 +78,8 @@ body{
                 color:$smoke;
             }
             #logotipo,#jacira, #hudson{
-                // border:solid 1px red;
             }
             #logotipo{
-             
             }
             #jacira, #hudson{
                 @include percent(60px 0px);
@@ -195,6 +193,23 @@ body{
                     }
                     #val{
                         @include area(val);
+                        @include d_grid(grid,1fr,20% 80%, 
+                                        'titulo-valores titulo-valores'
+                                        'argumentos argumentos');
+
+                        #titulo-valores{
+                            background-color:$smoke;
+                            color:$dark;
+                            @include area(titulo-valores);
+                            @include d_flex(flex,row,center,center);
+                            margin-bottom: 3px;
+                        }
+                        #argumentos{
+                            background-color:$smoke;
+                            color:$dark;
+                            @include area(argumentos);
+                            @include d_flex(flex,column,center,center);
+                        }
                     }
                     #nos,#val{
                         text-align: center;
