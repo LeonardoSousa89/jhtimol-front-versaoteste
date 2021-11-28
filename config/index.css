@@ -11,12 +11,25 @@ body {
   body a {
     text-decoration: none; }
   body header {
-    background-color: #034C8C;
-    color: #FFFFFF;
-    grid-area: header; }
+    background: linear-gradient(90deg, whitesmoke 15%, black 85%);
+    color: whitesmoke;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between; }
     @media screen and (max-device-width: 1023px) {
       body header {
         display: none; } }
+    body header a {
+      color: whitesmoke;
+      outline: none; }
+    body header a:hover {
+      color: whitesmoke; }
+    body header #jacira, body header #hudson {
+      margin: 60px 0px;
+      font-weight: lighter;
+      width: 33%; }
   body main {
     background-color: #FFFFFF;
     grid-area: main;

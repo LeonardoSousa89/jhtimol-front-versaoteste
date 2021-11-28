@@ -62,12 +62,31 @@ body{
                     );
 
         header{
-            background-color:$primary;
-            color:$alpha;
+            background:linear-gradient(90deg, $smoke 15%, $dark 85%);
+            color:$smoke;
             @include area(header);
+            @include d_flex(flex,row,space-between,space-between);
 
             @media screen and(max-device-width:1023px) {
                 display: $empty-val;
+            }
+            a{
+                color:$smoke;
+                outline:none;
+            }
+            a:hover{
+                color:$smoke;
+            }
+            #logotipo,#jacira, #hudson{
+                // border:solid 1px red;
+            }
+            #logotipo{
+             
+            }
+            #jacira, #hudson{
+                @include percent(60px 0px);
+                font-weight:lighter;
+                width:33%;
             }
 
         }
