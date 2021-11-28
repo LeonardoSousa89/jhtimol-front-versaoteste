@@ -1,3 +1,4 @@
+// @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
     $alpha:#FFFFFF;
@@ -46,6 +47,7 @@
 } 
 
 body{
+    // font-family: 'Allerta Stencil', sans-serif;
     font-family: 'Allerta Stencil', sans-serif;
     @include percent(0);
     @include size(200vh,100vw);
