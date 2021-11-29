@@ -46,6 +46,27 @@
 } 
 
 body{
+
+     /* mobile */
+     @media screen and(max-device-width:360px) 
+     and(max-device-height:640px)
+     and(orientation:portrait){
+         @include size(250vh,100vw);
+ 
+         @include d_grid(grid,1fr,10% 220% 20%,
+                         'header header'
+                         'main     main'
+                         'footer footer'
+                         );
+        
+        header{border:solid 1px red;}
+        main{border:solid 1px black;}
+        footer{border:solid 1px darkgreen;}
+
+     }
+     /* mobile */
+
+
     font-family: 'Allerta Stencil', sans-serif;
     @include percent(0);
     @include size(200vh,100vw);
@@ -62,14 +83,38 @@ body{
                     );
 
         header{
+
+            /* mobile */
+            @media screen and(max-device-width:360px) 
+            and(max-device-height:640px)
+            and(orientation:portrait){
+                #jacira, #hudson{
+                    display:$empty-val;
+                }
+
+                #arrow{
+                    @include percent(60px 0px);
+                    cursor: pointer; 
+                    width:15%;
+                }
+                
+                #nos{
+                    #logotimol{
+                        width:100%;
+                    }
+                    #logo-timol{
+                    //    display: $empty-val;
+                       border: solid 1pc red;
+                    }
+                }
+            }
+            /* mobile */
+
             background:linear-gradient(90deg, $smoke 15%, $dark 85%);
             color:$smoke;
             @include area(header);
             @include d_flex(flex,row,space-between,space-between);
-
-            @media screen and(max-device-width:1023px) {
-                display: $empty-val;
-            }
+      
             a{
                 color:$smoke;
                 outline:none;
@@ -85,6 +130,9 @@ body{
                 @include percent(60px 0px);
                 font-weight:lighter;
                 width:33%;
+            }
+            #arrow{
+               display:$empty-val;
             }
 
         }
@@ -118,7 +166,6 @@ body{
                 }
                 #promoprod{
                     @include area(promoprod);
-                         // temporario
                      background: $smoke;
                      @include d_grid(grid,1fr 1fr,50% 50%,
                                     'prod1 prod2'
@@ -181,7 +228,6 @@ body{
                             @include area(logotimol);
                         }
                         #logo-timol{
-                            @include area(logotimol);
                             margin-top:7vh;
                             @include size(200px,400px);
                         }
@@ -242,10 +288,13 @@ body{
             }
         }
         footer{
+                /* mobile */
 
-              @media screen and(max-device-width:1023px) {
-              display: $empty-val;
-                 }
+                @media screen and(max-device-width:1023px) {
+                //   display: $empty-val;
+                    }
+
+                /* mobile */
             
             background-color:$dark;
             color:$alpha;

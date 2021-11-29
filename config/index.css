@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
 body {
+  /* mobile */
+  /* mobile */
   font-family: 'Allerta Stencil', sans-serif;
   margin: 0;
   height: 200vh;
@@ -8,9 +10,25 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 10% 180% 10%;
   grid-template-areas: "header header" "main     main" "footer footer"; }
+  @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+    body {
+      height: 250vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10% 220% 20%;
+      grid-template-areas: "header header" "main     main" "footer footer"; }
+      body header {
+        border: solid 1px red; }
+      body main {
+        border: solid 1px black; }
+      body footer {
+        border: solid 1px darkgreen; } }
   body a {
     text-decoration: none; }
   body header {
+    /* mobile */
+    /* mobile */
     background: linear-gradient(90deg, whitesmoke 15%, black 85%);
     color: whitesmoke;
     grid-area: header;
@@ -18,9 +36,17 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: space-between; }
-    @media screen and (max-device-width: 1023px) {
-      body header {
-        display: none; } }
+    @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+      body header #jacira, body header #hudson {
+        display: none; }
+      body header #arrow {
+        margin: 60px 0px;
+        cursor: pointer;
+        width: 15%; }
+      body header #nos #logotimol {
+        width: 100%; }
+      body header #nos #logo-timol {
+        border: solid 1pc red; } }
     body header a {
       color: whitesmoke;
       outline: none; }
@@ -30,6 +56,8 @@ body {
       margin: 60px 0px;
       font-weight: lighter;
       width: 33%; }
+    body header #arrow {
+      display: none; }
   body main {
     background-color: #FFFFFF;
     grid-area: main;
@@ -112,7 +140,6 @@ body {
           body main #prod #mivival #nos #logotimol {
             grid-area: logotimol; }
           body main #prod #mivival #nos #logo-timol {
-            grid-area: logotimol;
             margin-top: 7vh;
             height: 200px;
             width: 400px; }
@@ -161,6 +188,8 @@ body {
         margin-top: 2vh;
         cursor: pointer; }
   body footer {
+    /* mobile */
+    /* mobile */
     background-color: black;
     color: #FFFFFF;
     grid-area: footer;
@@ -168,9 +197,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80% 20%;
     grid-template-areas: "redes             redes" "copyright desenvolvedor"; }
-    @media screen and (max-device-width: 1023px) {
-      body footer {
-        display: none; } }
     body footer #redes {
       grid-area: redes;
       display: flex;
