@@ -58,7 +58,7 @@ body{
                          'main     main'
                          'footer footer'
                          );
-        
+
         header{border:solid 1px red;}
         main{border:solid 1px black;}
         footer{border:solid 1px darkgreen;}
@@ -104,7 +104,7 @@ body{
                     }
                     #logo-timol{
                     //    display: $empty-val;
-                       border: solid 1pc red;
+                       border: solid 1px red;
                     }
                 }
             }
@@ -137,6 +137,20 @@ body{
 
         }
         main{
+
+            /* mobile */
+            @media screen and(max-device-width:360px) 
+            and(max-device-height:640px)
+            and(orientation:portrait){
+                #nos,#val{
+                    border:solid 1px red;
+                }
+                #titulo-valores,#argumentos{
+                    border:solid 1px red;
+                }
+            }
+            /* mobile */
+
             background-color:$alpha;
             @include area(main);
             @include d_grid(grid,1fr,80% 20%,
@@ -154,9 +168,9 @@ body{
             #prod{
                 @include area(prod);
                 @include d_grid(grid,1fr,20% 30% 50%,
-                                'promo      promo'
+                                'promo         promo'
                                 'promoprod promoprod'
-                                'mivival mivival'
+                                'mivival     mivival'
                                 );
                 #promo{
                     @include area(promo);
@@ -205,6 +219,17 @@ body{
                      }
                 }
                 #mivival{
+                    
+                    /* mobile */
+                    @media screen and(max-device-width:360px) 
+                    and(max-device-height:640px)
+                    and(orientation:portrait){
+                        #logo-timol{
+                            display:$empty-val;
+                        }
+                    }
+                    /* mobile */
+
                     background-color:$secondary;
                     color:whitesmoke;
                     a{
@@ -234,31 +259,31 @@ body{
 
                         @include d_grid(grid,1fr,1fr 1fr 1fr,
                                         'titulosomos titulosomos'
-                                        'somos somos'
-                                        'logotimol logotimol' )
+                                        'somos             somos'
+                                        'logotimol     logotimol' )
                     }
                     #val{
                         @include area(val);
                         @include d_grid(grid,1fr,20% 80%, 
                                         'titulo-valores titulo-valores'
-                                        'argumentos argumentos');
+                                        'argumentos         argumentos');
 
                         #titulo-valores{
                             background-color:$smoke;
                             color:$dark;
                             @include area(titulo-valores);
-                            @include d_flex(flex,row,center,center);
+                            @include d_flex(flex,row,$center,$center);
                             margin-bottom: 3px;
                         }
                         #argumentos{
                             background-color:$smoke;
                             color:$dark;
                             @include area(argumentos);
-                            @include d_flex(flex,column,center,center);
+                            @include d_flex(flex,column,$center,$center);
                         }
                     }
                     #nos,#val{
-                        text-align: center;
+                        text-align: $center;
                         padding:5em;
                     }
                 }
@@ -269,7 +294,7 @@ body{
                 @include area(form);
                 padding:0.5vw;
                 
-                @include d_flex(flex,column,center,center);
+                @include d_flex(flex,column,$center,$center);
                 #msg{
                     margin-bottom:2vh;
                 }
@@ -289,11 +314,36 @@ body{
         }
         footer{
                 /* mobile */
+                 @media screen and(max-device-width:360px) 
+                 and(max-device-height:640px)
+                 and(orientation:portrait){
 
-                @media screen and(max-device-width:1023px) {
-                //   display: $empty-val;
+                    // @include d_grid(grid,1fr 1fr,60% 20% 20%, 
+                    //         'redes                 redes'
+                    //         'desenvolvedor desenvolvedor'
+                    //         'copyright         copyright'
+                    // );
+
+                    @include d_flex(flex,column,center,center);
+                    text-align:$center;
+                    #redes{
+                        // border: 1px solid $alpha; 
                     }
-
+                    #desenvolvedor{
+                        // border: 1px solid $alpha;
+                    }
+                    #criador{
+                        @include percent(0);
+                        // border: 1px solid red;
+                    }
+                    #copy{
+                        @include percent(60px 0);
+                        // border: 1px solid $alpha;
+                    }
+                    #desenvolvedor,#criador{
+                        @include f_size(xx-small);
+                    }
+                 }
                 /* mobile */
             
             background-color:$dark;
@@ -305,11 +355,11 @@ body{
                     );
             #redes{
                 @include area(redes);
-                @include d_flex(flex,column,center,center);
+                @include d_flex(flex,column,$center,$center);
                 #redes-icone{
                     width:30%;
                     height:14vh;
-                    @include d_flex(flex,row,space-between,center);
+                    @include d_flex(flex,row,space-between,$center);
                     #icone{
                         color:$alpha;
                     }

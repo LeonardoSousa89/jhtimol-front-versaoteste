@@ -46,7 +46,7 @@ body {
       body header #nos #logotimol {
         width: 100%; }
       body header #nos #logo-timol {
-        border: solid 1pc red; } }
+        border: solid 1px red; } }
     body header a {
       color: whitesmoke;
       outline: none; }
@@ -59,12 +59,19 @@ body {
     body header #arrow {
       display: none; }
   body main {
+    /* mobile */
+    /* mobile */
     background-color: #FFFFFF;
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 20%;
     grid-template-areas: "prod" "form"; }
+    @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+      body main #nos, body main #val {
+        border: solid 1px red; }
+      body main #titulo-valores, body main #argumentos {
+        border: solid 1px red; } }
     body main #absoluto {
       position: fixed;
       margin-left: 25vw; }
@@ -77,7 +84,7 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 20% 30% 50%;
-      grid-template-areas: "promo      promo" "promoprod promoprod" "mivival mivival"; }
+      grid-template-areas: "promo         promo" "promoprod promoprod" "mivival     mivival"; }
       body main #prod #promo {
         grid-area: promo; }
         body main #prod #promo #video {
@@ -117,6 +124,8 @@ body {
         body main #prod #promoprod #prod1, body main #prod #promoprod #prod2, body main #prod #promoprod #prod3, body main #prod #promoprod #prod4 {
           border: solid 1px #FFFFFF; }
       body main #prod #mivival {
+        /* mobile */
+        /* mobile */
         background-color: #03658C;
         color: whitesmoke;
         grid-area: mivival;
@@ -124,6 +133,9 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 50% 50%;
         grid-template-areas: "nos  nos" "val  val"; }
+        @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+          body main #prod #mivival #logo-timol {
+            display: none; } }
         body main #prod #mivival a {
           color: #FFFFFF; }
         body main #prod #mivival #nos {
@@ -131,7 +143,7 @@ body {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-          grid-template-areas: "titulosomos titulosomos" "somos somos" "logotimol logotimol"; }
+          grid-template-areas: "titulosomos titulosomos" "somos             somos" "logotimol     logotimol"; }
           body main #prod #mivival #nos h2 {
             grid-area: titulosomos;
             margin-bottom: 5vh; }
@@ -148,7 +160,7 @@ body {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 20% 80%;
-          grid-template-areas: "titulo-valores titulo-valores" "argumentos argumentos"; }
+          grid-template-areas: "titulo-valores titulo-valores" "argumentos         argumentos"; }
           body main #prod #mivival #val #titulo-valores {
             background-color: whitesmoke;
             color: black;
@@ -197,6 +209,19 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80% 20%;
     grid-template-areas: "redes             redes" "copyright desenvolvedor"; }
+    @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+      body footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        body footer #criador {
+          margin: 0; }
+        body footer #copy {
+          margin: 60px 0; }
+        body footer #desenvolvedor, body footer #criador {
+          font-size: xx-small; } }
     body footer #redes {
       grid-area: redes;
       display: flex;
