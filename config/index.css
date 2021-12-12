@@ -216,12 +216,14 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center; }
+        body footer #desenvolvedor {
+          color: black;
+          visibility: none; }
         body footer #criador {
-          margin: 0; }
+          margin: 0;
+          display: none; }
         body footer #copy {
-          margin: 60px 0; }
-        body footer #desenvolvedor, body footer #criador {
-          font-size: xx-small; } }
+          margin-top: 150px; } }
     body footer #redes {
       grid-area: redes;
       display: flex;

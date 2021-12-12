@@ -330,19 +330,22 @@ body{
                         // border: 1px solid $alpha; 
                     }
                     #desenvolvedor{
-                        // border: 1px solid $alpha;
+                     // border: 1px solid $alpha;
+                     color: $dark;
+                     visibility: $empty-val;
                     }
                     #criador{
                         @include percent(0);
                         // border: 1px solid red;
+                        display:$empty-val;
                     }
                     #copy{
-                        @include percent(60px 0);
+                        margin-top:150px;
                         // border: 1px solid $alpha;
                     }
-                    #desenvolvedor,#criador{
-                        @include f_size(xx-small);
-                    }
+                    // #desenvolvedor,#criador{
+                    //     @include f_size(xx-small);
+                    // }
                  }
                 /* mobile */
             
