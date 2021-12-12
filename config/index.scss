@@ -59,7 +59,7 @@ body{
                          'footer footer'
                          );
 
-        header{border:solid 1px red;}
+        // header{border:solid 1px red;}
         main{border:solid 1px black;}
         footer{border:solid 1px darkgreen;}
 
@@ -89,14 +89,9 @@ body{
             and(max-device-height:640px)
             and(orientation:portrait){
                 #jacira, #hudson{
-                    // display:$empty-val;
                     @include f_size(small);
-                }
-
-                #arrow{
-                    @include percent(60px 0px);
-                    cursor: pointer; 
-                    width:15%;
+                    padding: 10px; 
+                    height:100%;
                 }
             }
             /* mobile */
@@ -113,10 +108,10 @@ body{
             a:hover{
                 color:$smoke;
             }
-            #logotipo,#jacira, #hudson{
-            }
-            #logotipo{
-            }
+            // #logotipo,#jacira, #hudson{
+            // }
+            // #logotipo{
+            // }
             #jacira, #hudson{
                 @include percent(60px 0px);
                 font-weight:lighter;
