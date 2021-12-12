@@ -38,15 +38,11 @@ body {
     align-items: space-between; }
     @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
       body header #jacira, body header #hudson {
-        display: none; }
+        font-size: small; }
       body header #arrow {
         margin: 60px 0px;
         cursor: pointer;
-        width: 15%; }
-      body header #nos #logotimol {
-        width: 100%; }
-      body header #nos #logo-timol {
-        border: solid 1px red; } }
+        width: 15%; } }
     body header a {
       color: whitesmoke;
       outline: none; }

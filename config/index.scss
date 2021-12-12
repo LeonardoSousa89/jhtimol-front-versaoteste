@@ -89,23 +89,14 @@ body{
             and(max-device-height:640px)
             and(orientation:portrait){
                 #jacira, #hudson{
-                    display:$empty-val;
+                    // display:$empty-val;
+                    @include f_size(small);
                 }
 
                 #arrow{
                     @include percent(60px 0px);
                     cursor: pointer; 
                     width:15%;
-                }
-                
-                #nos{
-                    #logotimol{
-                        width:100%;
-                    }
-                    #logo-timol{
-                    //    display: $empty-val;
-                       border: solid 1px red;
-                    }
                 }
             }
             /* mobile */
